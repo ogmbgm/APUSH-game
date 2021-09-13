@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/index.css","webpack://src/App.css"],"names":[],"mappings":"AAAA,KACE,UACF,CCFA,QACE,qBACF,CAEA,MACE,SAAU,CACV,gBACF","file":"main.bea38079.chunk.css","sourcesContent":["body {\n  color: black;\n}\n",".answer {\n  background-color: black;\n}\n\n.card {\n  width: 50%;\n  margin: 25px auto;\n}\n"]}
