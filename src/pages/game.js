@@ -18,7 +18,6 @@ function Game() {
     useEffect(() => {
         makeGame()
         // eslint-disable-next-line
-        
     }, [])
 
     function shuffle(array) {
@@ -76,14 +75,14 @@ function Game() {
         <div className="card" id="question-card">
             <h1>{questionList[questionPointer]["title"]}</h1>
             {/* <ul> */}
-                {questionList[questionPointer]["questions"].map((e,i)=><p className="p-2 mb-0 fs-5 border-top border-bottom" id={'li'+i} key={i}>{e['q']} <span onClick={()=>document.getElementById(i).classList.toggle("answer")} id={i} className="answer">{e['a']}</span><button className="btn btn-success mx-1" onClick={()=>qCorrect(i)}><i class="bi bi-check"></i></button><button className="btn btn-danger" onClick={()=>document.querySelectorAll('#li'+i+' button').forEach(e=>e.disabled = true)}><i class="bi bi-x"></i></button><button className="mx-1 btn btn-warning" onClick={()=>qNI(i)}>Not Imp.</button></p>)}
+                {questionList[questionPointer]["questions"].map((e,i)=><p className="p-2 mb-0 fs-5 border-top border-bottom" id={'li'+i} key={i}>{e['q']}: <span onClick={()=>document.getElementById(i).classList.toggle("answer")} id={i} className="answer font-italic">{e['a']}</span><button className="btn btn-success mx-1" onClick={()=>qCorrect(i)}><i class="bi bi-check"></i></button><button className="btn btn-danger" onClick={()=>document.querySelectorAll('#li'+i+' button').forEach(e=>e.disabled = true)}><i class="bi bi-x"></i></button><button className="mx-1 btn btn-warning" onClick={()=>qNI(i)}>Not Imp.</button></p>)}
             {/* </ul> */}
-            <h2>Notes:</h2>
+            <h5>Notes:</h5>
             <ul>
-                {questionList[questionPointer]["notes"].map((e,i)=><li className="mb-2 fs-5" key={i}>{e}</li>)}
+                {questionList[questionPointer]["notes"].map((e,i)=><li className="fs-6" key={i}>{e}</li>)}
             </ul>
-            <h4>Score: {(numCorrect/numOfQ)*100}%</h4>
-            <button className="btn btn-primary" onClick={nextQuestion}>Next</button>
+            <h5 className="mt-2">Score: {(numCorrect/numOfQ)*100}%</h5>
+            <button id="btn-next" className="btn btn-primary" onClick={nextQuestion}>Next</button>
         </div>
     );
 }

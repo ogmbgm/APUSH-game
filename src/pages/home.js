@@ -10,8 +10,8 @@ function Home() {
             <p className="card-text">A quiz over the APUSH key ideas</p>
             <div className="d-flex flex-column">
                 <Link to='/game/1'><button className="btn btn-primary mb-2">Chapter 1</button></Link>
-                <Link to='/game/2'><button className="btn btn-primary mb-2">Chapter 2</button></Link>
-                <Link to='/game/3'><button className="btn btn-primary mb-2">Chapter 3 (1-4)</button></Link>
+                <Link to='/game/2'><button disabled="true" className="btn btn-primary mb-2">Chapter 2</button></Link>
+                <Link to='/game/3'><button disabled="true" className="btn btn-primary mb-2">Chapter 3 (1-4)</button></Link>
             </div>
             </div>
         </div>
